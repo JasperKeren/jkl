@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Redirect root URL to login.php
+RewriteCond %{REQUEST_URI} ^/$
+RewriteRule ^ login.php [L]
+
+# Ensure PHP files are served correctly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
