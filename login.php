@@ -65,14 +65,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com'; // Replace with your SMTP server
                 $mail->SMTPAuth = true;
-                $mail->Username = 'chilukuridileepreddy7@gmail.com'; // Your email
-                $mail->Password = 'ztokshssvrfwarvz';   // Your email password
+                $mail->Username = '18ka1a0503@gmail.com'; // Your email
+                $mail->Password = 'wtsgjusfjndbidar';   // Your email password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Use TLS
                 $mail->Port = 587; // Port for TLS
             
                 // Email Content
                 $mail->isHTML(true);
-                $mail->setFrom('chilukuridileepreddy7@gmail.com', 'Dileep');
+                $mail->setFrom('18ka1a0503@gmail.com', 'Jasper');
                 $mail->addAddress($email); // Recipient's email
                 $mail->Subject = 'Your Two-Factor Authentication (2FA) Code';
                 $mail->Body = "<html>
