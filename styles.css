@@ -1,0 +1,418 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+/* Form container */
+.form-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Form heading */
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 1.8em;
+}
+
+/* Error message */
+.error {
+    background: #ffe6e6;
+    color: #d9534f;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* Input fields */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/* Button */
+button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Link styling */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Add some spacing around the link */
+.form-container a {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #007bff;
+}
+
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    .form-container h2 {
+        font-size: 1.5em;
+    }
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Header */
+header {
+    position: relative; /* Allows the logout button to position relative to this container */
+    padding: 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column; /* Keeps the title and description stacked */
+    align-items: center; /* Centers title and description */
+}
+
+header h1, header p {
+    margin: 0;
+}
+
+.logout-button {
+    position: absolute;
+    top: 20px; /* Positions near the top */
+    right: 20px; /* Positions near the right corner */
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Section Titles */
+h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Buttons */
+button, .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover, .btn:hover {
+    opacity: 0.9;
+}
+
+
+.btn.edit:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.btn.delete:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.btn.unassign:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+.btn.edit {
+    background-color: #28a745;
+}
+
+.btn.delete {
+    background-color: #dc3545;
+}
+
+.btn.unassign {
+    background-color: #ffc107;
+}
+
+.btn.add {
+    background-color: #17a2b8;
+}
+
+.btn.cancel {
+    background-color: #6c757d;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+table th {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Search Bars */
+.search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Modal Forms */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.modal label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.modal input, .modal textarea, .modal button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal button {
+    margin-top: 15px;
+}
+
+/* Actions Section */
+.actions {
+    margin-bottom: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.actions button {
+    padding: 10px 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    table th, table td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .modal {
+        padding: 20px;
+    }
+
+    .modal h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Style the Select dropdowns */
+.select-dropdown {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none; /* Removes default browser styling */
+    -webkit-appearance: none; /* Removes default browser styling in Safari */
+    -moz-appearance: none; /* Removes default browser styling in Firefox */
+}
+
+/* On focus, change the border color and add a shadow */
+.select-dropdown:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Add custom arrow icon */
+.select-dropdown::after {
+    content: '▼'; /* Downward arrow */
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* Hover effect for options */
+.select-dropdown:hover {
+    border-color: #007bff;
+}
+
+/* Style for the options (optional customization) */
+.select-dropdown option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+/* Hover effect for options */
+.select-dropdown option:hover {
+    background-color: #f1f1f1;
+    color: #007bff;
+}
+
+/* Add transition for smooth background change */
+.select-dropdown option {
+    transition: background-color 0.3s ease;
+}
+
+/* Remove the default appearance of the dropdown for a more modern look */
+.select-dropdown::-ms-expand {
+    display: none;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .select-dropdown {
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .select-dropdown::after {
+        font-size: 10px;
+    }
+}
+
+.tab-content {
+    margin-top: 20px;
+}
